@@ -33,7 +33,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-x: auto;
+    overflow-x: auto; /*para aparecer barra de rolagem em telas pequenas*/
 }
 
 table {
