@@ -1,7 +1,203 @@
-body {
+
+:root {
+    --cor-borda-tabela-cinza: #DDDDDD;
+
+    --cor-titulo-col-cinza: #999999;
+
+    --cor-fundo-tabela-cinza: #F7F7F7;
+
+    --cor-nome-times: #666666;
+
+    --cor-legenda: #8f8f8f;
+
+    --cor-cinza-555555: #555555;
+
+    --cor-pontos: black;
+
+    --cor-pos-azul-marinho: #003366;
+    --cor-pos-azul-celeste: #1398BE;
+    --cor-pos-laranja: #DE9800;
+    --cor-pos-cinza: #CCCCCC;
+    --cor-pos-vermelho: #C91B04;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 table {
-    width: 500px;
+    width: 38rem;
+    border-collapse: collapse;
+    border: 1px solid var(--cor-borda-tabela-cinza);
+    text-align: center;
+
 }
+
+thead {
+    /*b) tamanho 13px, cor #999999, formato negrito e alinhamento centralizado*/
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--cor-titulo-col-cinza);
+    align-items: center;
+    height: 1.5rem;
+  }
+/*espessura e cor linhas da tabela*/
+tr {
+    border-bottom: 1px solid var(--cor-borda-tabela-cinza);
+  }
+
+/*Borda entre pos 4 e 5  , 16 e 17*/
+tr:nth-child(4),
+tr:nth-child(16) {
+  border-bottom: 2px solid var(--cor-pos-cinza);
+}
+
+/* tamanho coluna P ate SG*/
+thead th:nth-child(2),
+thead th:nth-child(3),
+thead th:nth-child(4),
+thead th:nth-child(5),
+thead th:nth-child(6),
+thead th:nth-child(7),
+thead th:nth-child(8),
+thead th:nth-child(9){
+  width: 2.5rem;
+}
+
+/* tamanho coluna %*/
+thead th:nth-child(10) {
+    width: 3rem;
+  }
+
+
+/*defini fundo das colunas para cinza*/
+  tbody td:nth-child(3),
+  tbody td:nth-child(5),
+  tbody td:nth-child(7),
+  tbody td:nth-child(9),
+  tbody td:nth-child(11) {
+    background-color: var(--cor-fundo-tabela-cinza);
+  }
+
+/*a) Posições de classificação: tamanho 18px, em formato negrito*/
+  tbody th {
+    font-size: 18px;
+    font-weight: bold;
+    height: 1.8rem;
+    width: 2.5rem;
+  }
+
+/*cores das posicoes de classificacao */
+tbody tr:nth-child(1),
+tbody tr:nth-child(2),
+tbody tr:nth-child(3) {
+  color: var(--cor-pos-azul-marinho);
+}
+
+
+tbody tr:nth-child(4) {
+    color: var(--cor-pos-azul-celeste);
+  }
+  
+
+  tbody tr:nth-child(5),
+  tbody tr:nth-child(6),
+  tbody tr:nth-child(7),
+  tbody tr:nth-child(8),
+  tbody tr:nth-child(9),
+  tbody tr:nth-child(10),
+  tbody tr:nth-child(11),
+  tbody tr:nth-child(12) {
+    color: var(--cor-pos-laranja);
+  }
+  
+
+  tbody tr:nth-child(13),
+  tbody tr:nth-child(14),
+  tbody tr:nth-child(15),
+  tbody tr:nth-child(16) {
+    color: var(--cor-pos-cinza);
+  }
+  
+  tbody tr:nth-child(17),
+  tbody tr:nth-child(18),
+  tbody tr:nth-child(19),
+  tbody tr:nth-child(20) {
+    color: var(--cor-pos-vermelho);
+  }
+
+/*e) formatacao corpo tabela*/
+  tbody td {
+    font-size: 14px;
+    color: var(--cor-nome-times);
+  }
+
+/*c)	Nomes dos times: tamanho 14px, cor #666666, formato negrito e alinhamento à esquerda*/
+  .time {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--cor-nome-times);
+    text-align: left;
+  }
+
+/*d)	Coluna referente à quantidade de pontos dos times: tamanho 14px, cor preta, formato negrito e alinhamento centralizado; */
+  .pontos {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--cor-pontos);
+    text-align: center;
+  }
+
+ /*f) */ 
+  tfoot {
+    font-size: 10px;
+    text-align: left;
+    color: var(--cor-legenda);
+  }
+
+  /*g) e h)	Legendas (siglas/Siginificados) cor #555555*/
+  .legenda {
+    color: var(--cor-cinza-555555);
+  }
+
+  tfoot tr {
+    border: none;
+  }
+  
+  tfoot tr:first-child td {
+    padding: 7px 0px 0px 7px;
+  }
+  
+  tfoot tr:last-child td {
+    padding: 5px 0px 7px 7px;
+  }
+  
+  img {
+    height: 10px;
+    width: 10px;
+    border-radius: 2px;
+  }
+
+  .azul-marinho {
+    background: var(--cor-pos-azul-marinho);
+  }
+  .azul-celeste {
+    background: var(--cor-pos-azul-celeste);
+  }
+  .laranja {
+    background: var(--cor-pos-laranja);
+  }
+  .vermelho {
+    background: var(--cor-pos-vermelho);
+  }
+  
